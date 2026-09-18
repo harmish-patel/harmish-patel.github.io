@@ -56,16 +56,15 @@ export const experience = [
       {
         title: "Mobile Engineering Manager",
         period: "2021 — Present",
-        stack: ["AI-Assisted Development", "Native Android", "iOS", "React Native", "GraphQL", "Node.js", "TypeScript"],
+        stack: ["AI-Assisted Development", "React Native", "GraphQL", "Node.js", "TypeScript", "Native Android (Kotlin) / iOS (SwiftUI)"],
         points: [
-          "Took over an underperforming 6-person team building Northwestern Mutual's React Native field app — used extensively by field representatives and a key driver of the company's OKRs and revenue — and grew it into one of NM's top-rated apps for customer satisfaction.",
+          "Engineered high-stakes transaction features driving multi-million dollars in net-new deposits.",
           "Leading AI adoption into the team's SDLC and building the culture behind it — creating skills and agents for repetitive work like tech debt backlog generation, migration work, feature flag removal, and code coverage/testing.",
           "Fashioned an AI adoption dashboard to monitor usage trends and AI-assisted merge requests across the team.",
           "Scaled the mobile engineering organization by nearly 100%, formalizing enterprise-wide recruitment, screening, and interview pipelines.",
-          "Engineered high-stakes transaction features driving multi-million dollars in net-new deposits.",
-          "Integrated the mobile stack with a high-throughput Apollo GraphQL platform built by the backend team, retiring legacy mobile backend frameworks.",
           "Stepped up to manage both the mobile and backend engineering teams for nearly a year, bridging the gap while recruiting the right permanent backend leader.",
-          "Led a full redesign of the mobile Billing and Payments infrastructure.",
+          "Integrated the mobile stack with a high-throughput Apollo GraphQL platform built by the backend team, retiring legacy mobile backend frameworks.",
+          "Took over an underperforming 6-person team building Northwestern Mutual's React Native field app — used extensively by field representatives and a key driver of the company's OKRs and revenue — and grew it into one of NM's top-rated apps for customer satisfaction."
         ],
       },
     ],
@@ -78,19 +77,18 @@ export const experience = [
       {
         title: "Engineering Supervisor (Mobile Ecosystems)",
         period: "2016 — 2021",
-        stack: ["Native Android", "iOS"],
+        stack: ["Native Android (Java, Kotlin) / iOS (Obj C, Swift, UIKit)"],
         points: [
-          "Managed an onshore and offshore team of 10 supporting a portfolio of 6 applications: Xerox Workplace, Xerox Print Service Plugin, Xerox Mobile Link, Xerox Genuine Scan, Xerox Team Availability, and the Xerox Workplace Mac OS X app.",
           "Sole institutional gatekeeper for Xerox's global Apple Developer and Google Play accounts.",
-          "Represented Xerox in the Mopria Alliance, the cross-industry standards body for mobile printing and scanning interoperability.",
-          "Scaled Xerox Workplace to 1M+ downloads with a 50% surge in installs and 4.4/5.0 rating.",
-          "Authored and upstreamed core printer subsystem code to AOSP (Commit 22888aa).",
           "Led the mobile app engineering behind Xerox Workplace, part of the solution recognized with 4 BLI Smart Workplace Solutions Line of the Year awards (2016, 2017, 2019, 2020) from Keypoint Intelligence.",
-          "Led my team in building the Xerox Team Availability App, piloted at the UK's Imperial College Healthcare NHS Trust.",
-          "Built an offshore engineering division in India from scratch, cutting burn-rate by 30%.",
-          "Integrated Xerox Workplace with enterprise MDM platforms — MobileIron, Good Technology, and Microsoft Intune.",
-          "Integrated printer discovery and printing over IPP, SNMP, and WiFi Direct protocols on Xerox Workplace.",
+          "Scaled Xerox Workplace to 1M+ downloads with a 50% surge in installs and 4.4/5.0 rating.",
+          "Led building the Xerox Team Availability App, piloted at the UK's Imperial College Healthcare NHS Trust.",
           "Designed a touchless NFC authentication framework during COVID-19 for secure, contactless printing, driving a ~10% increase in monthly active users after launch.",
+          "Authored and upstreamed core printer subsystem code to Android Open Source Project.",
+          "Built an offshore engineering mobile team in India from scratch cutting burn-rate by 30%. Together with my on-shore team, it supported a portfolio of 6 applications: Xerox Workplace, Xerox Print Service Plugin, Xerox Mobile Link, Xerox Genuine Scan, Xerox Team Availability, and the Xerox Workplace Mac OS X app.",
+          "Integrated Xerox Workplace with enterprise MDM platforms — MobileIron, Good Technology, and Microsoft Intune.",
+          "Integrated printer discovery and printing over IPP, SNMP, and WiFi Direct protocols on Xerox Workplace for maximum printer discovery and printing support",
+          "Represented Xerox in the Mopria Alliance, the cross-industry standards body for mobile printing and scanning interoperability.",
         ],
       },
       {
@@ -115,7 +113,7 @@ export const experience = [
       {
         title: "Graduate Systems Engineering Intern",
         period: "2010 — 2011",
-        stack: ["VB.NET"],
+        stack: [],
         points: [
           "Contributed to transactional codebase verification and diagnostics for high-volume clearing banking modules.",
         ],
@@ -135,7 +133,7 @@ export const software = [
   {
     name: "Northwestern Mutual App",
     description:
-      "Enterprise mobile app for policyholders — linking insurance, investments, banking, and net worth tracking into a single view, with high-stakes transaction and billing features I engineered and led the redesign of.",
+      "Native enterprise mobile app for policyholders — linking insurance, investments, banking, and net worth tracking into a single view, with high-stakes transaction and billing features I engineered and led the redesign of.",
     metrics: ["4.8/5.0 rating"],
     links: [
       { label: "View on Google Play", href: "https://play.google.com/store/apps/details?id=com.nm.nm&hl=en_US" },
@@ -145,7 +143,7 @@ export const software = [
   {
     name: "Xerox Workplace",
     description:
-      "Enterprise mobile app powering print, scan, and workplace workflows for Fortune 500 enterprises, government agencies, and healthcare institutions — integrated with enterprise MDM platforms including MobileIron, Good Technology, and Microsoft Intune.",
+      "Native enterprise mobile app powering print, scan, and workplace workflows for Fortune 500 enterprises, government agencies, and healthcare institutions — integrated with enterprise MDM platforms including MobileIron, Good Technology, and Microsoft Intune.",
     metrics: ["1M+ downloads", "4.4/5.0 rating", "4x BLI Line of the Year", "MDM integrated"],
     links: [
       { label: "View on Google Play", href: "https://play.google.com/store/apps/details?id=com.xerox.mobileprint&hl=en_US" },
@@ -178,9 +176,10 @@ export const software = [
     name: "AOSP Printer Subsystem",
     description:
       "Core wireless discovery integration upstreamed to the Android Open Source Project, shipping natively on billions of Android devices.",
-    metrics: ["Commit 22888aa", "Billions of endpoints"],
+    metrics: ["Billions of endpoints"],
     links: [
-      { label: "View AOSP commit", href: "https://android.googlesource.com/platform/packages/experimental.git/+/22888aa21bf916ca8b344a6944bd38406ba31d92" },
+      { label: "In Android OS", href: "https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/packages/PrintRecommendationService/src/com/android/printservice/recommendation/plugin/xerox" },
+      { label: "Commit 22888aa", href: "https://android.googlesource.com/platform/packages/experimental.git/+/22888aa21bf916ca8b344a6944bd38406ba31d92" },
     ],
   },
 ]
@@ -191,12 +190,6 @@ export const education = [
     school: "Syracuse University",
     detail: "Awarded 30% Merit-Based Academic Scholarship",
     period: "2009 — 2011",
-  },
-  {
-    degree: "Bachelor of Engineering in Computer Science and Engineering",
-    school: "SVIT - Gujarat University",
-    detail: "India",
-    period: "May 2008",
   },
 ]
 

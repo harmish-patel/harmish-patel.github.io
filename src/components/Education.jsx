@@ -11,19 +11,25 @@ export default function Education() {
             §04 — Education
           </p>
           <div className="mt-8 grid gap-px sm:grid-cols-2 bg-line border border-line">
-            {education.map((ed) => (
-              <div key={ed.degree} className="flex items-start gap-5 bg-paper p-8">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-ink text-ink">
-                  <GraduationCap size={20} />
-                </span>
-                <div>
-                  <h3 className="font-serif text-lg text-ink">{ed.degree}</h3>
-                  <p className="mt-1 font-mono text-sm text-blue">{ed.school}</p>
-                  <p className="mt-2 text-ink-2">{ed.detail}</p>
-                  <p className="mt-1 font-mono text-xs text-ink-3">{ed.period}</p>
+            {education.map((ed, i) => {
+              const isLastAlone = i === education.length - 1 && education.length % 2 !== 0
+              return (
+                <div
+                  key={ed.degree}
+                  className={`flex items-start gap-5 bg-paper p-8 ${isLastAlone ? "sm:col-span-2" : ""}`}
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center border border-ink text-ink">
+                    <GraduationCap size={20} />
+                  </span>
+                  <div>
+                    <h3 className="font-serif text-lg text-ink">{ed.degree}</h3>
+                    <p className="mt-1 font-mono text-sm text-blue">{ed.school}</p>
+                    <p className="mt-2 text-ink-2">{ed.detail}</p>
+                    <p className="mt-1 font-mono text-xs text-ink-3">{ed.period}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </Reveal>
 
@@ -32,18 +38,24 @@ export default function Education() {
             Licenses &amp; Certifications
           </p>
           <div className="mt-8 grid gap-px sm:grid-cols-2 bg-line border border-line">
-            {certifications.map((c) => (
-              <div key={c.name} className="flex items-start gap-4 bg-paper p-6">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-rust text-rust">
-                  <Award size={16} />
-                </span>
-                <div>
-                  <h4 className="font-medium text-ink">{c.name}</h4>
-                  <p className="mt-1 font-mono text-xs text-rust">{c.issuer}</p>
-                  <p className="mt-1 font-mono text-xs text-ink-3">Issued {c.date}</p>
+            {certifications.map((c, i) => {
+              const isLastAlone = i === certifications.length - 1 && certifications.length % 2 !== 0
+              return (
+                <div
+                  key={c.name}
+                  className={`flex items-start gap-4 bg-paper p-6 ${isLastAlone ? "sm:col-span-2" : ""}`}
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-rust text-rust">
+                    <Award size={16} />
+                  </span>
+                  <div>
+                    <h4 className="font-medium text-ink">{c.name}</h4>
+                    <p className="mt-1 font-mono text-xs text-rust">{c.issuer}</p>
+                    <p className="mt-1 font-mono text-xs text-ink-3">Issued {c.date}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </Reveal>
       </div>
